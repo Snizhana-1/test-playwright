@@ -1,13 +1,8 @@
 import { test, expect } from '@playwright/test';
 import { registrationForm } from '../pages/registrationPositive';
 
-test.beforeEach( async ({page,context})=>{
-        await context.setHTTPCredentials ({
-                username: 'guest' ,
-                password: 'welcome2qauto'
-         });
-
-        await page.goto('https://qauto.forstudy.space/');
+test.beforeEach( async ({page,baseURL})=>{
+        await page.goto(baseURL!);
 
         await page.getByText('Sign In').waitFor();
         await page.getByText('Sign In').click();
