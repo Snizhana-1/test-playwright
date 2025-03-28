@@ -47,7 +47,7 @@ export default defineConfig({
     {
       name: 'QA',
       use: {
-      storageState: 'storageState.json',
+      //storageState: 'storageState.json',
       baseURL:process.env.BASE_URL_QA,
       httpCredentials:{
         username:process.env.HTTP_CREDENTIALS_USERNAME_QA || '',
@@ -59,7 +59,7 @@ export default defineConfig({
     {
       name: 'PROD',
       use: { 
-      storageState: 'storageState.json',
+      //storageState: 'storageState.json',
       baseURL:process.env.BASE_URL_PROD,
       httpCredentials:{
           username:process.env.HTTP_CREDENTIALS_USERNAME_PROD || '',

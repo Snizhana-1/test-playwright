@@ -17,8 +17,9 @@
   },
   "homepage": "https://github.com/Snizhana-1/test-playwright#readme",
   "devDependencies": {
-    "@playwright/test": "^1.50.1",
-    "@types/node": "^22.13.4"
+    "@playwright/test": "^1.51.0",
+    "@types/node": "^22.13.4",
+    "allure-playwright": "^3.2.0"
   },
   "dependencies": {
     "dotenv": "^16.4.7"
