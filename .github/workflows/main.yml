@@ -23,4 +23,4 @@ jobs:
             -w /e2e \
             --shm-size=2g \
             playwright-tests \
-            npx playwright test
+            npm test
