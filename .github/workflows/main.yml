@@ -1,0 +1,26 @@
+name: Run Playwright in Docker
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  playwright-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build Docker image
+        run: docker build -t playwright-tests .
+
+      - name: Run Playwright tests inside Docker
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}:/e2e \
+            -w /e2e \
+            --shm-size=2g \
+            playwright-tests \
+            npx playwright test
